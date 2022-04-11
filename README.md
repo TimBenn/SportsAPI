@@ -1,10 +1,14 @@
 
 # SportsAPI
 
-A small API for creating teams and players.
+A small API for creating teams and players. This project was built with .NET 6, EF Core and OData.
+
+OData query information can be found here: [OData query data](https://www.odata.org/getting-started/basic-tutorial/#queryData)
 
 
 ## API Reference
+
+All
 
 ### Players
 
