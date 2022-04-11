@@ -24,23 +24,9 @@ builder.Services.AddControllers()
     .AddNewtonsoftJson(options =>
         options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
     )
-    .AddOData(opt => opt.AddRouteComponents("v1", GetEdmModel()).EnableQueryFeatures()); ;
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new() { Title = "Sports API", Version = "v1" });
-});
+    .AddOData(opt => opt.AddRouteComponents("v1", GetEdmModel()).EnableQueryFeatures());
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI(c => {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Sports API v1");
-    });
-}
 
 app.UseAuthorization();
 

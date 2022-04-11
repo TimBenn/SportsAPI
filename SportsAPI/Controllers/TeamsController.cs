@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Formatter;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
-using Microsoft.AspNetCore.OData.Routing.Attributes;
 using Microsoft.EntityFrameworkCore;
 using SportsAPI.Context;
 using SportsAPI.Models;
